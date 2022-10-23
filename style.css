@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body,
+.footer__text__link {
+    color: rgb(56, 56, 56);
+}
+
+.main__title {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    width: min(90%, 1200px);
+    margin-inline: auto;
+    margin-bottom: 50px;
+}
+
+.card {
+    border: 1px solid rgb(219, 219, 219);
+    height: 320px;
+    position: relative;
+}
+
+.card__preloader {
+    background: rgb(245, 245, 245);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.card__preloader--visible {
+    opacity: 1;
+}
+
+.card__preloader__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.card__preloader__caption {
+    width: 200px;
+    height: 15px;
+    margin-left: 20px;
+}
+
+.card__preloader__title {
+    width: 100px;
+    height: 25px;
+}
+
+.card__preloader__title,
+.card__preloader__caption {
+    animation: skeleton-loading 1s linear infinite alternate;
+    display: block;
+    border-radius: 5px;
+
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background:rgb(225, 225, 225);
+    }
+
+    100% {
+        background: rgb(210, 210, 210);
+    }
+}
+
+.card__header {
+    padding: 10px 20px;
+}
+
+.card__header__title {
+    font-size: 1.3rem;
+}
+
+.card__header__caption {
+    font-size: 0.95rem;
+    color: rgb(146, 146, 146);
+}
+
+.card__content__image {
+    background: url('https://picsum.photos/4000'); /* esse site está propositalmente carregando uma imagem 4000x4000 para demonstrar sua função */
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    height: 70px;
+    display: grid;
+    place-items: center left;
+}
+
+.footer__text {
+    font-size: 1.1rem;
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
