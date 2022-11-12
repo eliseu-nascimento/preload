@@ -1,2 +1,2 @@
-# preloade
+# preload
 Animação de pré-carregamento
